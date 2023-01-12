@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto' sans-serif;
+    color: #f1f1f1 !important;
+    letter-spacing: 2px;
+    transition: all .25s ease;
+    cursor: default;
+}
+
+*::selection {
+    background-color: var(--secondary);
+    color: #ffff;
+}
+
+:root {
+    --primary: #0E0B09;
+    --secondary: #C6A87D;
+}
+
+.App {
+    background-color: #1111 !important;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+body i,
+a,
+button,
+span {
+    cursor: pointer;
+}
+
+.height-full {
+    height: 100vh !important;
+    position: relative;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.main-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+}
+
+.title {
+    font-family: inherit;
+    font-size: 2rem;
+}
+
+.muted-text {
+    opacity: .75;
+}
+
+.shadow {
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.031),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.044),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.055),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.066),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.079),
+        100px 100px 80px rgba(0, 0, 0, 0.11);
+}
+
+.btn-custom {
+    line-height: 1.5rem;
+    background-color: var(--secondary);
+    color: inherit;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+    width: auto;
+}
+
+.btn-custom:hover {
+    border-color: var(--secondary);
+    color: var(--secondary) !important;
+    background-color: transparent;
+}
+
+.nav-color {
+    background-color: var(--primary) !important;
+}
+
+.nav-link {
+    border-bottom: 5px solid transparent;
+    padding: 1.5rem;
+}
+
+.nav-link.active {
+    border-bottom-color: #f1f1f1;
+}
+
+.navbar-custom {
+    border-right: 1px solid rgba(241, 241, 241, .1);
+    color: #f1f1f1 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    height: 100vh;
+    width: 8rem;
+}
+
+.navbar-scrolled {
+    background-color: var(--primary);
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar-custom ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    transition: all .5s ease;
+}
+
+.navbar-custom ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-custom ul li {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: block;
+    cursor: pointer;
+}
+
+.navbar-custom ul li span {
+    font-weight: 600;
+}
+
+.navbar-custom ul li:hover {
+    opacity: 0.7;
+}
+
+/* .nav-not-active {
+    width: 7rem;
+}
+
+.nav-active {
+    width: 12rem;
+    transition: all .5s ease;
+} */
+
+.navbar-custom .navbar-icons {
+    font-size: 1.5rem !important;
+    padding: .5rem;
+}
+
+.header-wrap {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('./assets/img/header2.png') center no-repeat;
+    background-size: cover;
+    padding-left: 128px;
+}
+
+.main-section {
+    padding-left: 128px;
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.header-section {
+    padding-left: 3rem;
+    margin-top: 10.5rem;
+    margin-bottom: 0;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: var(--secondary) !important;
+    font-weight: 700;
+}
+
+#images {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#images img,
+#about img {
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    transition: all .5s ease;
+}
+
+#images .img-wrapp:is(:hover, :active) img {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#about {
+    overflow-x: hidden;
+}
+
+#about .img-wrapp:is(:hover, :active) img {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#images .img-text {
+    font-size: 1.75rem;
+    font-family: 'Bebas Neue', cursive;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+#images .img-text p {
+    margin: 0;
+}
+
+#contact .custom-col {
+    max-width: 490px;
+    margin-inline: auto;
+}
+
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+    display: inline-block;
+    margin: .5rem;
+    width: 100%;
+    max-width: 475px;
+    outline: 0;
+    padding: .75rem;
+    border: 1px solid rgba(241, 241, 241, .1);
+}
+
+#contactForm input,
+textarea {
+    background-color: rgba(241, 241, 241, .1);
+    resize: none;
+}
+
+#contactForm button {
+    width: 100%;
+    border-color: var(--secondary);
+}
+
+.fa-angle-up {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .55);
+}
+
+#staff .staff-card {
+    border: 1px solid rgba(241, 241, 241, .1);
+    margin-inline: 2rem;
+}
+
+#staff .staff-card .staff-card-body {
+    padding: 2rem;
+}
+
+#staff .staff-card .staff-card-head img {
+    display: block;
+    margin-inline: auto;
+    margin-top: 2rem;
+    border-radius: 100%;
+}
+
+#staff .custom-dot-list-style {
+    width: 50px !important;
+}
+
+
+/* lg */
+@media screen and (max-width: 992px) {
+    .main-title {
+        font-size: 2.75rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .header-section {
+        margin-top: 10.5rem;
+    }
+}
+
+/* md */
+@media screen and (max-width: 768px) {
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    #staff .staff-card {
+        margin-inline: 1rem;
+    }
+}
+
+/* sm */
+@media screen and (max-width: 576px) {
+    .header-section {
+        padding: 0;
+    }
+
+    .navbar-custom {
+        padding-top: 2rem;
+        width: 6rem;
+    }
+
+    .navbar-custom ul li span {
+        font-size: .75rem;
+        font-weight: 700;
+    }
+
+    .main-section,
+    .header-wrap {
+        padding-left: 96px;
+    }
+
+    .text {
+        font-size: .95rem;
+    }
+}
+
+@media screen and (max-height: 576px) {
+    .header-section {
+        margin-top: 5rem;
+    }
+}
